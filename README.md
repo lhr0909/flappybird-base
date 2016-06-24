@@ -11,4 +11,4 @@ npm install
 npm start
 ```
 
-After that, you should be able to open the game by visiting `http://localhost:5000` on your browser.
+After that, you should be able to open the game by visiting `http://localhost:8080` on your browser.
