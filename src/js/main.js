@@ -1,6 +1,10 @@
 var gameObjects = {};
 var gameOver = false;
 
+function jumpBird() {
+  gameObjects.bird.body.velocity.y = -450;
+}
+
 function createBird() {
   gameObjects.bird = game.add.sprite(game.width / 4, game.height / 4, 'bird');
   gameObjects.bird.scale.setTo(0.3, 0.3);
@@ -115,7 +119,7 @@ var mainState = {
       gameObjects.background.tilePosition.x -= 3;
 
       if (game.input.activePointer.isDown) {
-        gameObjects.bird.body.velocity.y = -450;
+        jumpBird();
       }
 
       for (var i = 0; i < gameObjects.pipes.children.length; i++) {
@@ -123,6 +127,8 @@ var mainState = {
           gameOver = true;
         }, null, this);
       }
+
+      window.makeJumpingDecision();
     }
 
 
