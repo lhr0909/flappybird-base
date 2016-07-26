@@ -115,6 +115,9 @@ var mainState = {
       gameObjects.pipes.children.forEach(function(group) {
         group.setAll('body.velocity.x', 0);
       });
+      gameObjects = {};
+      gameOver = false;
+      game.state.start('main');
     } else {
       gameObjects.background.tilePosition.x -= 3;
 
