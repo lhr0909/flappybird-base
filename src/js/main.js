@@ -133,5 +133,5 @@ var mainState = {
 };
 
 var game = new Phaser.Game(window.innerWidth, window.innerHeight);
-game.state.add('main', mainState);
+game.state.add('main', window.gameState);
 game.state.start('main');
