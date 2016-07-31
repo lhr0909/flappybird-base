@@ -10,7 +10,7 @@
     "phaser": "cp ./node_modules/phaser/build/phaser.js ./dist/js",
     "copy": "cp -R ./src/* ./dist",
     "rapydscript": "rapydscript ./python/game.py -o ./dist/js/game.js",
-    "serve": "http-server ./dist -a 0.0.0.0 -p 8080",
+    "serve": "http-server ./dist -a 0.0.0.0 -p 8089",
     "start": "npm run cleanup && npm run assets && npm run phaser && npm run copy && npm run rapydscript && npm run serve"
   },
   "repository": {
